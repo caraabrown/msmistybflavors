@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="icon" type="image/png" href="uploads/MMB logo IG.png">
+  <title>Ms. Misty B — Seasoning | Drip. Sauce. Seasoning.</title>
+  <meta name="description" content="Seasoning — In The Kitchen With Ms. Misty B. Exclusive video moments bringing that East Oakland flavor.">
+  <meta name="keywords" content="Ms. Misty B, In The Kitchen With Ms Misty B, Oakland, Flavor, Drip, Sauce, Seasoning, cooking">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0d0d0d">
+  <meta property="og:title" content="Ms. Misty B — Seasoning">
+  <meta property="og:description" content="Exclusive video moments from Ms. Misty B.">
+  <meta property="og:image" content="uploads/MMB logo IG.png">
+  <meta property="og:type" content="video.other">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ms. Misty B — Seasoning">
+  <meta name="twitter:description" content="Exclusive video moments from Ms. Misty B.">
+  <meta name="twitter:image" content="uploads/MMB logo IG.png">
+  <link rel="stylesheet" href="_ds/cara-a-brown-design-system-6758f7fa-7f1f-4735-bd27-039a24473674/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/cara-a-brown-design-system-6758f7fa-7f1f-4735-bd27-039a24473674/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/cara-a-brown-design-system-6758f7fa-7f1f-4735-bd27-039a24473674/styles.css">
+  <script src="_ds/cara-a-brown-design-system-6758f7fa-7f1f-4735-bd27-039a24473674/_ds_bundle.js"></script>
+  <style>
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes introFade { from { opacity: 1; } to { opacity: 0; } }
+    @keyframes titleFadeOut { 0% { opacity: 1; } 100% { opacity: 0; } }
+    a { color: rgba(255,255,255,0.7); }
+    a:hover { color: #ffffff; }
+    .yt-bg-wrap iframe { position: absolute; top: 50%; left: 50%; width: 177.78vh; min-width: 100%; height: 56.25vw; min-height: 100%; transform: translate(-50%, -50%); pointer-events: none; border: 0; }
+  </style>
+</helmet>
+
+<template id="__bundler_thumbnail" data-bg-color="#0d0d0d">
+  <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+    <rect width="400" height="300" fill="#0d0d0d"></rect>
+    <text x="200" y="160" text-anchor="middle" font-family="Helvetica Neue,Arial,sans-serif" font-size="40" font-weight="700" fill="#ffffff" letter-spacing="2">SEASONING</text>
+  </svg>
+</template>
+
+<div style="position: fixed; inset: 0; width: 100vw; height: 100vh; overflow: hidden; background: #000;" onClick="{{ handlePageClick }}">
+  <div class="yt-bg-wrap" style="position: absolute; inset: 0; overflow: hidden;">
+    <div id="yt-bg-seasoning"></div>
+  </div>
+  <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.55) 100%);"></div>
+  <div style="position: absolute; top: 0; left: 0; right: 0; height: 92px; z-index: 1; background: #000; pointer-events: none;"></div>
+  <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 92px; z-index: 1; background: #000; pointer-events: none;"></div>
+
+  <a href="Flavors.dc.html" style="position: absolute; top: 32px; left: 32px; z-index: 4; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; opacity: 0; animation: fadeUp 0.6s ease-out 2.5s both;">← Flavors</a>
+
+  <button onClick="{{ prevClip }}" aria-label="Previous" style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); z-index: 4; background: none; border: none; padding: 12px; cursor: pointer; color: rgba(255,255,255,0.6); transition: color 0.2s;" style-hover="color: #ffffff;">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+  </button>
+  <button onClick="{{ nextClip }}" aria-label="Next" style="position: absolute; right: 16px; top: 50%; transform: translateY(-50%); z-index: 4; background: none; border: none; padding: 12px; cursor: pointer; color: rgba(255,255,255,0.6); transition: color 0.2s;" style-hover="color: #ffffff;">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+  </button>
+
+  <button onClick="{{ toggleSound }}" aria-label="Toggle sound" style="position: absolute; top: 32px; right: 32px; z-index: 4; background: none; border: none; padding: 8px; cursor: pointer; color: rgba(255,255,255,0.75); transition: color 0.2s;" style-hover="color: #ffffff;">
+    <sc-if value="{{ muted }}" hint-placeholder-val="{{ true }}">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
+    </sc-if>
+    <sc-if value="{{ !muted }}" hint-placeholder-val="{{ false }}">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+    </sc-if>
+  </button>
+
+  <div style="position: absolute; inset: 0; z-index: 3; background: #000; pointer-events: none; animation: introFade 1s ease-out both;"></div>
+
+  <div style="position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; height: 100%; padding: 0 32px; box-sizing: border-box;">
+    <h1 style="animation: fadeUp 1s ease-out both, titleFadeOut 1s ease-out 2s forwards; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: clamp(64px, 15vw, 200px); font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #ffffff; margin: 0; line-height: 1; text-align: center;">Seasoning</h1>
+  </div>
+
+  <div style="position: absolute; bottom: 28px; left: 32px; max-width: calc(100% - 64px); z-index: 4; display: flex; align-items: center; gap: 10px;">
+    <a href="{{ ytUrl }}" target="_blank" rel="noopener" style="display: flex; flex-shrink: 0; color: rgba(255,255,255,0.85);">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.43z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor" stroke="none"></polygon></svg>
+    </a>
+    <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 400; color: rgba(255,255,255,0.75); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ videoTitle }}</span>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { title: '', muted: true };
+  // ============================================================
+  // VIDEOS — add more here.
+  // One line per clip: id = the YouTube video id (the part after
+  // watch?v=), start / end = seconds into the video to play.
+  // They loop in this order.
+  // ============================================================
+  clips = [
+    { id: 'hrlZBn9Lk7A', start: 0, end: 63 },
+    { id: 'hrlZBn9Lk7A', start: 225, end: 284 },
+    { id: 'C_Il5xXuzic', start: 3, end: 43 },
+  ];
+  idx = 0;
+
+  componentDidMount() {
+    if (window.YT && window.YT.Player) { this.initPlayer(); return; }
+    const prevCb = window.onYouTubeIframeAPIReady;
+    window.onYouTubeIframeAPIReady = () => { if (prevCb) prevCb(); this.initPlayer(); };
+    if (!document.getElementById('yt-iframe-api')) {
+      const tag = document.createElement('script');
+      tag.id = 'yt-iframe-api';
+      tag.src = 'https://www.youtube.com/iframe_api';
+      document.head.appendChild(tag);
+    }
+  }
+
+  initPlayer() {
+    const clip = this.clips[this.idx];
+    this.player = new YT.Player('yt-bg-seasoning', {
+      videoId: clip.id,
+      playerVars: { autoplay: 1, mute: 1, controls: 0, disablekb: 1, modestbranding: 1, rel: 0, playsinline: 1, cc_load_policy: 0, start: clip.start },
+      events: {
+        onReady: (e) => { e.target.mute(); e.target.playVideo(); this.updateInfo(); this.startWatcher(); },
+      },
+    });
+  }
+
+  startWatcher() {
+    clearInterval(this._t);
+    this._t = setInterval(() => {
+      if (!this.player || !this.player.getCurrentTime) return;
+      const clip = this.clips[this.idx];
+      if (this.player.getCurrentTime() >= clip.end) this.nextClip();
+    }, 300);
+  }
+
+  nextClip() {
+    this.idx = (this.idx + 1) % this.clips.length;
+    const clip = this.clips[this.idx];
+    this.player.loadVideoById({ videoId: clip.id, startSeconds: clip.start });
+    setTimeout(() => this.updateInfo(), 600);
+  }
+
+  prevClip() {
+    this.idx = (this.idx - 1 + this.clips.length) % this.clips.length;
+    const clip = this.clips[this.idx];
+    this.player.loadVideoById({ videoId: clip.id, startSeconds: clip.start });
+    setTimeout(() => this.updateInfo(), 600);
+  }
+
+  toggleSound() {
+    if (!this.player) return;
+    if (this.state.muted) { this.player.unMute(); this.setState({ muted: false }); }
+    else { this.player.mute(); this.setState({ muted: true }); }
+  }
+
+  handlePageClick() {
+    if (this.state.muted && this.player) { this.player.unMute(); this.setState({ muted: false }); }
+  }
+
+  updateInfo() {
+    try {
+      const data = this.player.getVideoData();
+      this.setState({ title: (data && data.title) || '' });
+    } catch (e) {}
+  }
+
+  componentWillUnmount() {
+    clearInterval(this._t);
+    if (this.player && this.player.destroy) this.player.destroy();
+  }
+
+  renderVals() {
+    const clip = this.clips[this.idx];
+    return {
+      videoTitle: this.state.title,
+      ytUrl: 'https://www.youtube.com/watch?v=' + clip.id,
+      nextClip: () => this.nextClip(),
+      prevClip: () => this.prevClip(),
+      muted: this.state.muted,
+      toggleSound: (e) => { e.stopPropagation(); this.toggleSound(); },
+      handlePageClick: () => this.handlePageClick(),
+    };
+  }
+}
+
+</script>
+</body>
+</html>
