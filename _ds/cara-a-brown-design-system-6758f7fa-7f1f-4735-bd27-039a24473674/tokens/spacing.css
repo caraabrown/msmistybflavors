@@ -1,0 +1,41 @@
+/* ---------------------------------------------------------------
+   Cara A. Brown — Spacing & Page Tokens
+   Print-native (inches). The document rhythm is tight and
+   deliberate — small vertical gaps, generous side margins.
+---------------------------------------------------------------- */
+:root {
+  /* --- Page geometry (US Letter) --- */
+  --page-w:            8.5in;   /* @kind spacing */
+  --page-h:            11in;    /* @kind spacing */
+
+  /* 2-page resume padding */
+  --page-pad-y-2up:    0.28in;  /* @kind spacing */
+  --page-pad-x-2up:    0.6in;   /* @kind spacing */
+
+  /* 3-page resume padding */
+  --page-pad-top-3up:  0.32in;  /* @kind spacing */
+  --page-pad-bot-3up:  0.18in;  /* @kind spacing */
+  --page-pad-x-3up:    0.55in;  /* @kind spacing */
+
+  /* --- Vertical rhythm --- */
+  --sp-hbar-2up:       0.11in;  /* @kind spacing */ /* .hbar margin (2-page) */
+  --sp-hbar-3up:       0.04in;  /* @kind spacing */ /* .hbar margin (3-page) */
+  --sp-label-top:      0.06in;  /* @kind spacing */ /* .sec-label margin-top */
+  --sp-label-bot:      0.05in;  /* @kind spacing */ /* .sec-label margin-bottom */
+  --sp-label-pad:      0.02in;  /* @kind spacing */ /* .sec-label padding-bottom */
+  --sp-synopsis-bot:   0.05in;  /* @kind spacing */
+  --sp-job-bot:        0.07in;  /* @kind spacing */ /* .job-block margin-bottom */
+  --sp-bullet-bot:     0.02in;  /* @kind spacing */ /* .bullets li margin-bottom */
+  --sp-bullet-indent:  0.15in;  /* @kind spacing */ /* bullet hanging indent */
+  --sp-grid-bot:       0.06in;  /* @kind spacing */ /* .expertise-grid margin-bottom */
+  --sp-cat-top:        0.02in;  /* @kind spacing */ /* .exp-cat margin-top */
+  --sp-footer-top:     0.08in;  /* @kind spacing */ /* footer padding-top */
+
+  /* --- Rules & bars --- */
+  --hbar-height:       2px;     /* @kind spacing */ /* accent bar */
+  --rule-width:        1px;     /* @kind spacing */ /* dividers / underlines */
+
+  /* --- Cover letter rhythm --- */
+  --sp-cover-para:     0.18in;  /* @kind spacing */ /* paragraph spacing */
+  --sp-cover-hbar:     0.05in;  /* @kind spacing */ /* hbar margin */
+}

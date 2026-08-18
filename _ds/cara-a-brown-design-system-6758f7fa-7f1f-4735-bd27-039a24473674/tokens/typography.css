@@ -1,0 +1,41 @@
+/* ---------------------------------------------------------------
+   Cara A. Brown — Typography Tokens
+   One family only: Helvetica Neue / Arial. No serifs, ever.
+   Sizes are expressed in points (print-native). The system is
+   built on weight + tracking + case, not on many sizes.
+---------------------------------------------------------------- */
+:root {
+  /* --- Family --- */
+  --font-sans: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+
+  /* --- Weights --- */
+  --fw-light:  300; /* @kind font */ /* contact · dates · detail text */
+  --fw-regular:400; /* @kind font */ /* body / bullets */
+  --fw-medium: 600; /* @kind font */ /* titles · job titles */
+  --fw-bold:   700; /* @kind font */ /* name · company · section + competency labels */
+
+  /* --- Type scale (print points) --- */
+  --fs-name:      25pt;   /* @kind font */ /* resume name (22–25pt, −0.02em) */
+  --fs-company:   8.5pt;  /* @kind font */ /* company / org, uppercase */
+  --fs-job-title: 8pt;    /* @kind font */ /* job title, accent */
+  --fs-body:      7.5pt;  /* @kind font */ /* body / bullets / synopsis / contact */
+  --fs-detail:    7pt;    /* @kind font */ /* dates · expertise detail · footer-adjacent */
+  --fs-title:     7.5pt;  /* @kind font */ /* subheader role line (6.5–7.8pt) */
+  --fs-label:     6pt;    /* @kind font */ /* section + competency labels */
+  --fs-footer:    6pt;    /* @kind font */ /* page footer */
+  --fs-cover:     10pt;   /* @kind font */ /* cover-letter body */
+
+  /* --- Tracking --- */
+  --tr-name:    -0.02em;  /* @kind font */ /* tight display */
+  --tr-title:    0.09em;  /* @kind font */ /* role line (0.08–0.1em) */
+  --tr-label:    0.08em;  /* @kind font */ /* section labels */
+  --tr-comp:     0.1em;   /* @kind font */ /* competency labels */
+  --tr-company:  0.04em;  /* @kind font */ /* company / dates */
+  --tr-contact:  0.03em;  /* @kind font */ /* contact line */
+
+  /* --- Line-heights --- */
+  --lh-body:    1.5;      /* @kind font */ /* synopsis · bullets */
+  --lh-detail:  1.45;     /* @kind font */ /* expertise detail */
+  --lh-cover:   1.65;     /* @kind font */ /* cover-letter body */
+  --lh-tight:   1.15;     /* @kind font */ /* headings */
+}
